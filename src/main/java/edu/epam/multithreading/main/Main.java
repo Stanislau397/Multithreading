@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) throws EmptyFileException {
         DataReader dataReader = new DataReader();
-        List<String> data = dataReader.readDataFromFile("file");
+        List<String> data = dataReader.readDataFromFile("data/file");
         CarParser carParser = new CarParser();
         List<Car> cars = carParser.parseCars(data);
         for (Car car : cars) {

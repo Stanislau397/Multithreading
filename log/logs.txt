@@ -8,3 +8,6 @@
 23:18:09.020 [Thread-0] INFO  epam.multithreading.state.impl.LoadingState - 1.0 has been loaded on ferry river
 23:18:13.045 [Thread-2] INFO  epam.multithreading.state.impl.UnloadingState - 3.0 has been unloaded from river ferry
 23:18:13.060 [Thread-0] INFO  epam.multithreading.state.impl.UnloadingState - 1.0 has been unloaded from river ferry
+23:53:20.488 [Thread-0] INFO  epam.multithreading.state.impl.ArrivingState - Car: 1.0 arrived
+23:53:23.515 [Thread-0] INFO  epam.multithreading.state.impl.LoadingState - 1.0 has been loaded on ferry river
+23:53:27.529 [Thread-0] INFO  epam.multithreading.state.impl.UnloadingState - 1.0 has been unloaded from river ferry
