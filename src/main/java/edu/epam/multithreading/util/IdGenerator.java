@@ -8,7 +8,6 @@ public class IdGenerator {
 
     public static long generateId() {
         counter = counter + 1;
-
         if (MIN_ID + counter >= MAX_ID) {
             counter = 0;
         }

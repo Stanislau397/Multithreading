@@ -23,9 +23,9 @@ public class DataReader {
                 linesList = br.lines().collect(Collectors.toList());
             } catch (FileNotFoundException e) {
                 logger.log(Level.ERROR, e.getMessage());
+                throw new EmptyFileException("File is empty");
             } catch (IOException e) {
                 logger.log(Level.ERROR, e.getMessage());
-                throw new EmptyFileException("File is empty");
             }
             return linesList;
         }
