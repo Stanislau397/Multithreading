@@ -17,7 +17,7 @@ public class DataReader {
 
     private static final Logger logger = LogManager.getLogger(DataReader.class);
 
-        public List<String> readDataFromFile(String path) {
+        public List<String> readDataFromFile(String path) throws EmptyFileException {
             List<String> linesList = new ArrayList<>();
             try (BufferedReader br = new BufferedReader(new FileReader(path))) {
                 linesList = br.lines().collect(Collectors.toList());
@@ -25,6 +25,7 @@ public class DataReader {
                 logger.log(Level.ERROR, e.getMessage());
             } catch (IOException e) {
                 logger.log(Level.ERROR, e.getMessage());
+                throw new EmptyFileException("File is empty");
             }
             return linesList;
         }

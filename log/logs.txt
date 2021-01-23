@@ -1,13 +1,64 @@
-23:17:59.970 [Thread-0] INFO  epam.multithreading.state.impl.ArrivingState - Car: 1.0 arrived
-23:17:59.970 [Thread-1] INFO  epam.multithreading.state.impl.ArrivingState - Car: 2.0 arrived
-23:17:59.970 [Thread-2] INFO  epam.multithreading.state.impl.ArrivingState - Car: 3.0 arrived
-23:18:02.995 [Thread-1] INFO  epam.multithreading.state.impl.LoadingState - 2.0 has been loaded on ferry river
-23:18:02.995 [Thread-2] WARN  edu.epam.multithreading.entity.RiverFerry - River ferry is full.
-23:18:07.005 [Thread-1] INFO  epam.multithreading.state.impl.UnloadingState - 2.0 has been unloaded from river ferry
-23:18:09.020 [Thread-2] INFO  epam.multithreading.state.impl.LoadingState - 3.0 has been loaded on ferry river
-23:18:09.020 [Thread-0] INFO  epam.multithreading.state.impl.LoadingState - 1.0 has been loaded on ferry river
-23:18:13.045 [Thread-2] INFO  epam.multithreading.state.impl.UnloadingState - 3.0 has been unloaded from river ferry
-23:18:13.060 [Thread-0] INFO  epam.multithreading.state.impl.UnloadingState - 1.0 has been unloaded from river ferry
-23:53:20.488 [Thread-0] INFO  epam.multithreading.state.impl.ArrivingState - Car: 1.0 arrived
-23:53:23.515 [Thread-0] INFO  epam.multithreading.state.impl.LoadingState - 1.0 has been loaded on ferry river
-23:53:27.529 [Thread-0] INFO  epam.multithreading.state.impl.UnloadingState - 1.0 has been unloaded from river ferry
+01:20:35.787 [Thread-5] INFO  epam.multithreading.state.impl.ArrivingState - PASSENGER car arrived to Ferry river
+01:20:35.787 [Thread-7] INFO  epam.multithreading.state.impl.ArrivingState - CARGO car arrived to Ferry river
+01:20:35.786 [Thread-9] INFO  epam.multithreading.state.impl.ArrivingState - PASSENGER car arrived to Ferry river
+01:20:35.786 [Thread-0] INFO  epam.multithreading.state.impl.ArrivingState - CARGO car arrived to Ferry river
+01:20:35.787 [Thread-6] INFO  epam.multithreading.state.impl.ArrivingState - PASSENGER car arrived to Ferry river
+01:20:35.786 [Thread-4] INFO  epam.multithreading.state.impl.ArrivingState - CARGO car arrived to Ferry river
+01:20:35.786 [Thread-8] INFO  epam.multithreading.state.impl.ArrivingState - CARGO car arrived to Ferry river
+01:20:35.786 [Thread-2] INFO  epam.multithreading.state.impl.ArrivingState - PASSENGER car arrived to Ferry river
+01:20:35.786 [Thread-1] INFO  epam.multithreading.state.impl.ArrivingState - PASSENGER car arrived to Ferry river
+01:20:35.786 [Thread-3] INFO  epam.multithreading.state.impl.ArrivingState - CARGO car arrived to Ferry river
+01:20:37.798 [Thread-0] INFO  epam.multithreading.state.impl.LoadingState - CARGO car has been loaded on ferry river
+01:20:37.798 [Thread-9] INFO  epam.multithreading.state.impl.LoadingState - PASSENGER car has been loaded on ferry river
+01:20:37.798 [Thread-3] INFO  epam.multithreading.state.impl.LoadingState - CARGO car has been loaded on ferry river
+01:20:37.798 [Thread-5] INFO  epam.multithreading.state.impl.LoadingState - PASSENGER car has been loaded on ferry river
+01:20:37.798 [Thread-4] INFO  epam.multithreading.state.impl.LoadingState - CARGO car has been loaded on ferry river
+01:20:37.798 [Thread-1] INFO  epam.multithreading.state.impl.LoadingState - PASSENGER car has been loaded on ferry river
+01:20:37.798 [Thread-6] INFO  epam.multithreading.state.impl.LoadingState - PASSENGER car has been loaded on ferry river
+01:20:37.802 [Thread-2] INFO  epam.multithreading.state.impl.LoadingState - PASSENGER car has been loaded on ferry river
+01:20:37.803 [Thread-8] WARN  edu.epam.multithreading.entity.RiverFerry - River ferry is full. Cant take remaining cars!
+01:20:41.808 [Thread-0] INFO  epam.multithreading.state.impl.UnloadingState - CARGO car has been unloaded from river ferry
+01:20:41.808 [Thread-5] INFO  epam.multithreading.state.impl.UnloadingState - PASSENGER car has been unloaded from river ferry
+01:20:41.808 [Thread-4] INFO  epam.multithreading.state.impl.UnloadingState - CARGO car has been unloaded from river ferry
+01:20:41.808 [Thread-9] INFO  epam.multithreading.state.impl.UnloadingState - PASSENGER car has been unloaded from river ferry
+01:20:41.808 [Thread-6] INFO  epam.multithreading.state.impl.UnloadingState - PASSENGER car has been unloaded from river ferry
+01:20:41.808 [Thread-2] INFO  epam.multithreading.state.impl.UnloadingState - PASSENGER car has been unloaded from river ferry
+01:20:41.808 [Thread-1] INFO  epam.multithreading.state.impl.UnloadingState - PASSENGER car has been unloaded from river ferry
+01:20:41.808 [Thread-3] INFO  epam.multithreading.state.impl.UnloadingState - CARGO car has been unloaded from river ferry
+01:20:44.839 [Thread-7] WARN  edu.epam.multithreading.entity.RiverFerry - River ferry is full. Cant take remaining cars!
+01:20:44.839 [Thread-8] INFO  epam.multithreading.state.impl.LoadingState - CARGO car has been loaded on ferry river
+01:20:48.854 [Thread-8] INFO  epam.multithreading.state.impl.UnloadingState - CARGO car has been unloaded from river ferry
+01:20:51.883 [Thread-7] INFO  epam.multithreading.state.impl.LoadingState - CARGO car has been loaded on ferry river
+01:20:55.896 [Thread-7] INFO  epam.multithreading.state.impl.UnloadingState - CARGO car has been unloaded from river ferry
+01:26:46.406 [Thread-2] INFO  epam.multithreading.state.impl.ArrivingState - PASSENGER car arrived to Ferry river
+01:26:46.406 [Thread-7] INFO  epam.multithreading.state.impl.ArrivingState - CARGO car arrived to Ferry river
+01:26:46.406 [Thread-5] INFO  epam.multithreading.state.impl.ArrivingState - PASSENGER car arrived to Ferry river
+01:26:46.406 [Thread-1] INFO  epam.multithreading.state.impl.ArrivingState - PASSENGER car arrived to Ferry river
+01:26:46.406 [Thread-9] INFO  epam.multithreading.state.impl.ArrivingState - PASSENGER car arrived to Ferry river
+01:26:46.406 [Thread-6] INFO  epam.multithreading.state.impl.ArrivingState - PASSENGER car arrived to Ferry river
+01:26:46.406 [Thread-0] INFO  epam.multithreading.state.impl.ArrivingState - CARGO car arrived to Ferry river
+01:26:46.406 [Thread-4] INFO  epam.multithreading.state.impl.ArrivingState - CARGO car arrived to Ferry river
+01:26:46.406 [Thread-3] INFO  epam.multithreading.state.impl.ArrivingState - CARGO car arrived to Ferry river
+01:26:46.406 [Thread-8] INFO  epam.multithreading.state.impl.ArrivingState - CARGO car arrived to Ferry river
+01:26:48.445 [Thread-2] INFO  epam.multithreading.state.impl.LoadingState - PASSENGER car has been loaded on ferry river
+01:26:48.446 [Thread-5] INFO  epam.multithreading.state.impl.LoadingState - PASSENGER car has been loaded on ferry river
+01:26:48.446 [Thread-1] INFO  epam.multithreading.state.impl.LoadingState - PASSENGER car has been loaded on ferry river
+01:26:48.446 [Thread-9] INFO  epam.multithreading.state.impl.LoadingState - PASSENGER car has been loaded on ferry river
+01:26:48.446 [Thread-7] INFO  epam.multithreading.state.impl.LoadingState - CARGO car has been loaded on ferry river
+01:26:48.447 [Thread-8] WARN  edu.epam.multithreading.entity.RiverFerry - River ferry is full. Remaining cars are waiting.
+01:26:52.475 [Thread-5] INFO  epam.multithreading.state.impl.UnloadingState - PASSENGER car has been unloaded from river ferry
+01:26:52.475 [Thread-1] INFO  epam.multithreading.state.impl.UnloadingState - PASSENGER car has been unloaded from river ferry
+01:26:52.475 [Thread-9] INFO  epam.multithreading.state.impl.UnloadingState - PASSENGER car has been unloaded from river ferry
+01:26:52.475 [Thread-7] INFO  epam.multithreading.state.impl.UnloadingState - CARGO car has been unloaded from river ferry
+01:26:52.475 [Thread-2] INFO  epam.multithreading.state.impl.UnloadingState - PASSENGER car has been unloaded from river ferry
+01:26:56.491 [Thread-8] INFO  epam.multithreading.state.impl.LoadingState - CARGO car has been loaded on ferry river
+01:26:56.491 [Thread-3] WARN  edu.epam.multithreading.entity.RiverFerry - River ferry is full. Remaining cars are waiting.
+01:27:00.505 [Thread-8] INFO  epam.multithreading.state.impl.UnloadingState - CARGO car has been unloaded from river ferry
+01:27:04.516 [Thread-4] INFO  epam.multithreading.state.impl.LoadingState - CARGO car has been loaded on ferry river
+01:27:04.516 [Thread-0] INFO  epam.multithreading.state.impl.LoadingState - CARGO car has been loaded on ferry river
+01:27:04.516 [Thread-3] INFO  epam.multithreading.state.impl.LoadingState - CARGO car has been loaded on ferry river
+01:27:04.516 [Thread-6] INFO  epam.multithreading.state.impl.LoadingState - PASSENGER car has been loaded on ferry river
+01:27:08.522 [Thread-0] INFO  epam.multithreading.state.impl.UnloadingState - CARGO car has been unloaded from river ferry
+01:27:08.522 [Thread-4] INFO  epam.multithreading.state.impl.UnloadingState - CARGO car has been unloaded from river ferry
+01:27:08.538 [Thread-3] INFO  epam.multithreading.state.impl.UnloadingState - CARGO car has been unloaded from river ferry
+01:27:08.538 [Thread-6] INFO  epam.multithreading.state.impl.UnloadingState - PASSENGER car has been unloaded from river ferry

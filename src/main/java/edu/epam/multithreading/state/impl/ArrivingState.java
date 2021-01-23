@@ -7,13 +7,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class ArrivingState implements CarState<Car> {
 
     private static final Logger logger = LogManager.getLogger(ArrivingState.class);
-    private Lock locker = new ReentrantLock();
 
     @Override
     public void load(Car car) {
@@ -27,13 +24,13 @@ public class ArrivingState implements CarState<Car> {
 
     @Override
     public void arrive(Car car) {
-        double carId = car.getCarId();
-        logger.log(Level.INFO, "Car: " + carId + " arrived");
+        int seconds = 1;
+        logger.log(Level.INFO, "{} arrived to Ferry river", car);
         try {
-            TimeUnit.SECONDS.sleep(2);
+            TimeUnit.SECONDS.sleep(seconds);
             car.setState(new LoadingState());
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            logger.log(Level.ERROR, e.getMessage());
         }
     }
 }

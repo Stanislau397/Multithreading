@@ -7,7 +7,6 @@ import org.apache.logging.log4j.Logger;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -15,7 +14,7 @@ public class RiverFerry {
 
     public static final Logger logger = LogManager.getLogger(RiverFerry.class);
     private static final Lock locker = new ReentrantLock();
-    private static final int FERRY_SQUARE_CAPACITY = 55;
+    private static final int FERRY_SQUARE_CAPACITY = 150;
     private static final int FERRY_WEIGHT_CAPACITY = 250;
     private static final int TIME_TO_TRANSPORT_CARS = 2;
     private static final int MIN_CAR_WEIGHT = 0;
@@ -24,7 +23,6 @@ public class RiverFerry {
     private AtomicInteger currentCarWeight = new AtomicInteger();
     private AtomicInteger currentFerrySquare = new AtomicInteger();
     private static RiverFerry instance;
-    private Condition condition = locker.newCondition();
 
     private RiverFerry() {
 
@@ -43,22 +41,26 @@ public class RiverFerry {
     }
 
     public void loadCar(Car car) {
-        locker.lock();
         int carWeight = car.getWeight();
         int carSquare = car.getSquare();
+        int secondsToSleep = 2;
+        locker.lock();
         if (isFerryFull(car)) {
-                setCurrentFerrySquare(carSquare);
-                setCurrentCarWeight(carWeight);
+            setCurrentFerrySquare(carSquare);
+            setCurrentCarWeight(carWeight);
         } else {
-            logger.log(Level.WARN, "River ferry is full.");
+            logger.log(Level.WARN, "River ferry is full. Remaining cars are waiting.");
             try {
-                TimeUnit.SECONDS.sleep(2);
+                TimeUnit.SECONDS.sleep(secondsToSleep);
                 transportCars();
+                TimeUnit.SECONDS.sleep(secondsToSleep);
+                loadCar(car);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
         locker.unlock();
+
     }
 
     public void transportCars() {
@@ -92,5 +94,24 @@ public class RiverFerry {
 
     public void setCurrentFerrySquare(int currentFerrySquare) {
         this.currentFerrySquare = new AtomicInteger(currentFerrySquare);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        RiverFerry that = (RiverFerry) o;
+
+        if (currentCarWeight != null ? !currentCarWeight.equals(that.currentCarWeight) : that.currentCarWeight != null)
+            return false;
+        return currentFerrySquare != null ? currentFerrySquare.equals(that.currentFerrySquare) : that.currentFerrySquare == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = currentCarWeight != null ? currentCarWeight.hashCode() : 0;
+        result = 31 * result + (currentFerrySquare != null ? currentFerrySquare.hashCode() : 0);
+        return result;
     }
 }

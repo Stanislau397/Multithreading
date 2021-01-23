@@ -19,9 +19,8 @@ public class UnloadingState implements CarState<Car> {
     @Override
     public void unload(Car car) {
         RiverFerry riverFerry = RiverFerry.getInstance();
-        double carId = car.getCarId();
         riverFerry.transportCars();
-        logger.log(Level.INFO, carId + " has been unloaded from river ferry");
+        logger.log(Level.INFO, "{} has been unloaded from river ferry", car);
     }
 
     @Override

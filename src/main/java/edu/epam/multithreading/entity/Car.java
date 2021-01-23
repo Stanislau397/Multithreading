@@ -20,10 +20,6 @@ public class Car implements Runnable {
         this.state = new ArrivingState();
     }
 
-    public Car() {
-
-    }
-
     @Override
     public void run() {
         state.arrive(this);

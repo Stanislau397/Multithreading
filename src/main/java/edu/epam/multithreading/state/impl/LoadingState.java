@@ -16,13 +16,13 @@ public class LoadingState implements CarState<Car> {
     @Override
     public void load(Car car) {
         RiverFerry riverFerry = RiverFerry.getInstance();
-        double carId = car.getCarId();
+        int seconds = 1;
         try {
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.SECONDS.sleep(seconds);
             riverFerry.loadCar(car);
-            logger.log(Level.INFO, carId + " has been loaded on ferry river");
+            logger.log(Level.INFO, "{} has been loaded on ferry river", car);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            logger.log(Level.ERROR, e.getMessage());
         }
         car.setState(new UnloadingState());
     }
