@@ -60,7 +60,6 @@ public class RiverFerry {
             }
         }
         locker.unlock();
-
     }
 
     public void transportCars() {
